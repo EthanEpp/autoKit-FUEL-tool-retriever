@@ -160,7 +160,7 @@ If you use this project in academic work:
   title={AutoKit FUEL: Tool Retrieval Agent with Feedback-driven Update & Enrichment through Lookup},
   author={Epp, Ethan and Cheng, Jonathan},
   year={2025},
-  howpublished={\url{https://github.com/autokit-fuel-tool-retriever}},
+  howpublished={\url{https://github.com/EthanEpp/autoKit-FUEL-tool-retriever}},
   note={CMPSC 291A - UCSB}
 }
 ```
