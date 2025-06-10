@@ -1,0 +1,11 @@
+beautifulsoup4==4.13.4
+ipython==8.12.3
+langchain==0.3.25
+langchain_anthropic==0.3.15
+langchain_community==0.3.24
+langchain_core==0.3.64
+langchain_openai==0.3.21
+langchain_text_splitters==0.3.8
+langgraph==0.4.8
+pydantic==2.11.5
+Requests==2.32.4

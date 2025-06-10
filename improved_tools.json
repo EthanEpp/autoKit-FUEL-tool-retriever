@@ -1,0 +1,571 @@
+[
+    {
+        "name": "Bing Search",
+        "description": "Azure-hosted Bing Web Search API that enables safe, ad-free, location-aware search results, surfacing relevant information from billions of web documents. It helps users find what they're looking for from the world-wide-web by harnessing Bing's ability to comb billions of webpages, images, videos, and news with a single API call.",
+        "programming_language": "python",
+        "module": "langchain_community.utilities",
+        "class": "BingSearchAPIWrapper",
+        "init_args": {
+            "bing_subscription_key": "${BING_SUBSCRIPTION_KEY}",
+            "bing_search_url": "${BING_SEARCH_URL}"
+        },
+        "openapi": null,
+        "pricing": "Paid (Azure Cognitive Services usage-based)",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/bing_search",
+        "verified": true
+    },
+    {
+        "name": "Google Search",
+        "description": "Search Google for recent results using the Google Custom Search JSON API. Returns snippets, titles, and links of search results.",
+        "programming_language": "python",
+        "module": "langchain_google_community",
+        "class": "GoogleSearchAPIWrapper",
+        "init_args": {
+            "api_key": "${GOOGLE_API_KEY}",
+            "cse_id": "${GOOGLE_CSE_ID}",
+            "k": 10
+        },
+        "openapi": null,
+        "pricing": "Paid (Google Cloud usage-based)",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/google_search/",
+        "verified": true
+    },
+    {
+        "name": "SerpAPI",
+        "description": "A tool for searching the web using the SerpAPI service, which provides real-time search results scraping. It can be customized to use different search engines and parameters.",
+        "programming_language": "python",
+        "module": "langchain_community.utilities",
+        "class": "SerpAPIWrapper",
+        "init_args": {
+            "api_key": "${SERPAPI_API_KEY}",
+            "params": {
+                "engine": "google",
+                "gl": "us",
+                "hl": "en"
+            }
+        },
+        "openapi": null,
+        "pricing": "Freemium (100 free searches/mo)",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/serpapi/",
+        "verified": true
+    },
+    {
+        "name": "DuckDuckGo Search",
+        "description": "Privacy-focused search tool that provides access to DuckDuckGo's search capabilities. It offers two main functionalities: DuckDuckGoSearchRun for direct search results and DuckDuckGoSearchResults for more detailed results including snippets, titles, and links. The tool can perform general web searches and news-specific searches.",
+        "programming_language": "python",
+        "module": "langchain_community.tools",
+        "class": "DuckDuckGoSearchRun, DuckDuckGoSearchResults",
+        "init_args": {
+            "output_format": "string",
+            "backend": "text"
+        },
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/ddg/",
+        "verified": true
+    },
+    {
+        "name": "Brave Search",
+        "description": "Independent web search API by Brave, allowing you to perform web searches and retrieve results including titles, links, and snippets.",
+        "programming_language": "python",
+        "module": "langchain_community.tools",
+        "class": "BraveSearch",
+        "init_args": {
+            "api_key": "API KEY",
+            "search_kwargs": {
+                "count": 3
+            }
+        },
+        "openapi": null,
+        "pricing": null,
+        "documentation": "https://python.langchain.com/docs/integrations/tools/brave_search/",
+        "verified": false
+    },
+    {
+        "name": "You.com Search",
+        "description": "AI-driven search engine API that helps ground LLM outputs in recent, accurate, and relevant information not included in their training data.",
+        "programming_language": "python",
+        "module": "langchain_community.tools.you",
+        "class": "YouSearchTool",
+        "init_args": {
+            "api_wrapper": {
+                "ydc_api_key": "${YDC_API_KEY}",
+                "num_web_results": 1
+            }
+        },
+        "openapi": null,
+        "pricing": null,
+        "documentation": "https://python.langchain.com/docs/integrations/tools/you/",
+        "verified": false
+    },
+    {
+        "name": "SearxNG Search",
+        "description": "A self-hosted metasearch engine that allows querying multiple search engines and databases. It supports customizable parameters, various search engines, and can return structured results with metadata.",
+        "programming_language": "python",
+        "module": "langchain_community.utilities",
+        "class": "SearxSearchWrapper",
+        "init_args": {
+            "searx_host": "${SEARXNG_URL}"
+        },
+        "openapi": null,
+        "pricing": "Free (self-hosted)",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/searx_search/",
+        "verified": true
+    },
+    {
+        "name": "Jina Search",
+        "description": "Neural search API for querying and retrieving information from large datasets. It returns search results including title, link, snippet, and content.",
+        "programming_language": "python",
+        "module": "langchain_community.tools",
+        "class": "JinaSearch",
+        "init_args": {
+            "api_key": "${JINA_API_KEY}"
+        },
+        "openapi": null,
+        "pricing": "1M response tokens free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/jina_search/",
+        "verified": true
+    },
+    {
+        "name": "Mojeek Search",
+        "description": "Independent search engine API that allows querying Mojeek's search results. It supports customizable search parameters and requires an API key from the Mojeek website.",
+        "programming_language": "python",
+        "module": "langchain_community.tools",
+        "class": "MojeekSearch",
+        "init_args": {
+            "api_key": "KEY",
+            "search_kwargs": {
+                "t": 10
+            }
+        },
+        "openapi": null,
+        "pricing": null,
+        "documentation": "https://python.langchain.com/docs/integrations/tools/mojeek_search/",
+        "verified": false
+    },
+    {
+        "name": "SearchAPI.io",
+        "description": "Web search API that supports multiple search engines including Google, Google News, Google Jobs, Google Scholar, and more. It allows customization of search parameters and returns detailed results with metadata.",
+        "programming_language": "python",
+        "module": "langchain_community.utilities",
+        "class": "SearchApiAPIWrapper",
+        "init_args": {
+            "api_key": "${SEARCHAPI_API_KEY}"
+        },
+        "openapi": null,
+        "pricing": null,
+        "documentation": "https://python.langchain.com/docs/integrations/tools/searchapi/",
+        "verified": false
+    },
+    {
+        "name": "Tavily Search",
+        "description": "Tavily's Search API is a search engine built specifically for AI agents (LLMs), delivering real-time, accurate, and factual results at speed. It allows customization of search parameters such as maximum results, topic, inclusion of answers and raw content, image-related options, search depth, time range, and domain filtering.",
+        "programming_language": "python",
+        "module": "langchain_tavily",
+        "class": "TavilySearch",
+        "init_args": {
+            "api_key": "${TAVILY_API_KEY}",
+            "max_results": 5,
+            "topic": "general"
+        },
+        "openapi": null,
+        "pricing": "1,000 free searches / month",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/tavily_search/",
+        "verified": true
+    },
+    {
+        "name": "AskNews Search",
+        "description": "AskNews is a tool that infuses LLMs with the latest global news (or historical news) using a single natural language query. It enriches over 300k articles daily by translating, summarizing, extracting entities, and indexing them into vector databases. When queried, AskNews returns a prompt-optimized string containing pertinent enrichments (e.g., entities, classifications, translation, summarization), eliminating the need for managing your own news RAG system.",
+        "programming_language": "python",
+        "module": "langchain_community.tools.asknews",
+        "class": "AskNewsSearch",
+        "init_args": {
+            "max_results": 2,
+            "api_key": "${ASKNEWS_API_KEY}"
+        },
+        "openapi": null,
+        "pricing": "Free tier",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/asknews/",
+        "verified": true
+    },
+    {
+        "name": "Wikipedia Search",
+        "description": "Search and fetch Wikipedia articles using the Wikipedia API. This tool allows querying Wikipedia for information, retrieving summaries of articles, and accessing content from the world's largest online encyclopedia.",
+        "programming_language": "python",
+        "module": "langchain_community.tools",
+        "class": "WikipediaQueryRun",
+        "init_args": {
+            "api_wrapper": "WikipediaAPIWrapper()"
+        },
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/wikipedia/",
+        "verified": true
+    },
+    {
+        "name": "Wolfram Alpha",
+        "description": "Computational knowledge engine API that provides access to Wolfram Alpha's vast database of computational knowledge. It can solve equations, perform calculations, answer questions, and provide information on a wide range of topics including mathematics, science, engineering, and more.",
+        "programming_language": "python",
+        "module": "langchain_community.utilities.wolfram_alpha",
+        "class": "WolframAlphaAPIWrapper",
+        "init_args": {
+            "app_id": "${WOLFRAM_ALPHA_APPID}"
+        },
+        "openapi": null,
+        "pricing": "Freemium",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/wolfram_alpha/",
+        "verified": true
+    },
+    {
+        "name": "Azure Container Apps Dynamic Sessions",
+        "description": "Provides a secure and scalable way to run a Python code interpreter in Hyper-V isolated sandboxes. This allows agents to execute potentially untrusted code in a secure environment. The code interpreter includes many popular Python packages such as NumPy, pandas, and scikit-learn.",
+        "programming_language": "python",
+        "module": "langchain_azure_dynamic_sessions",
+        "class": "SessionsPythonREPLTool",
+        "init_args": {
+            "pool_management_endpoint": "${POOL_MANAGEMENT_ENDPOINT}"
+        },
+        "openapi": null,
+        "pricing": "Paid (Azure usage)",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/azure_dynamic_sessions/",
+        "verified": true
+    },
+    {
+        "name": "Bearly Code Interpreter",
+        "description": "Remote Python code execution service that allows for safe implementation of code interpreter capabilities in a sandbox environment. It can execute Python code, interact with files, and use various Python packages including requests, matplotlib, scipy, numpy, pandas, etc. Output can be captured from stdout, stdin, and written files.",
+        "programming_language": "python",
+        "module": "langchain_community.tools",
+        "class": "BearlyInterpreterTool",
+        "init_args": {
+            "api_key": "${BEARLY_API_KEY}"
+        },
+        "openapi": null,
+        "pricing": null,
+        "documentation": "https://python.langchain.com/docs/integrations/tools/bearly/",
+        "verified": true
+    },
+    {
+        "name": "Riza Code Interpreter",
+        "description": "A WASM-based isolated environment for running Python or JavaScript code generated by AI agents. It allows execution of code to solve problems that an LLM can't solve on its own, such as counting specific characters in a string.",
+        "programming_language": "python",
+        "module": "langchain_community.tools.riza.command",
+        "class": "ExecPython",
+        "init_args": {
+            "api_key": "${RIZA_API_KEY}"
+        },
+        "openapi": null,
+        "pricing": null,
+        "documentation": "https://python.langchain.com/docs/integrations/tools/riza/",
+        "verified": true
+    },
+    {
+        "name": "Pinecone",
+        "description": "Pinecone is a vector database with broad functionality for semantic search and similarity matching. It can be used for storing and querying vector embeddings, supporting various search methods like similarity search and MMR.",
+        "programming_language": "python",
+        "module": "langchain_pinecone",
+        "class": "PineconeVectorStore",
+        "init_args": {
+            "index": "pinecone.Index(index_name)",
+            "embedding": "OpenAIEmbeddings()"
+        },
+        "openapi": null,
+        "pricing": null,
+        "documentation": "https://python.langchain.com/docs/integrations/vectorstores/pinecone/",
+        "verified": true
+    },
+    {
+        "name": "Weaviate",
+        "description": "Open-source vector database that allows storing data objects and vector embeddings from ML models, scaling seamlessly into billions of data objects. It supports similarity search, filtering, and hybrid search capabilities.",
+        "programming_language": "python",
+        "module": "langchain_weaviate.vectorstores",
+        "class": "WeaviateVectorStore",
+        "init_args": {
+            "client": "weaviate.WeaviateClient",
+            "embedding": "OpenAIEmbeddings()"
+        },
+        "openapi": null,
+        "pricing": "Free (self-hosted), paid options available through Weaviate Cloud Services (WCS)",
+        "documentation": "https://python.langchain.com/docs/integrations/vectorstores/weaviate/",
+        "verified": true
+    },
+    {
+        "name": "FAISS",
+        "description": "Facebook AI Similarity Search (FAISS) is a library for efficient similarity search and clustering of dense vectors. It contains algorithms that search in sets of vectors of any size, up to ones that possibly do not fit in RAM. It also includes supporting code for evaluation and parameter tuning. FAISS can be used as a vector store in LangChain for storing and retrieving document embeddings.",
+        "programming_language": "python",
+        "module": "langchain_community.vectorstores",
+        "class": "FAISS",
+        "init_args": {
+            "embedding_function": null,
+            "index": null,
+            "docstore": null,
+            "index_to_docstore_id": {}
+        },
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/vectorstores/faiss/",
+        "verified": true
+    },
+    {
+        "name": "ArXiv",
+        "description": "Search and retrieve academic papers from the arXiv database. This tool allows querying papers by ID, author, or topic, and returns information such as publication date, title, authors, and summary.",
+        "programming_language": "python",
+        "module": "langchain_community.tools.arxiv",
+        "class": "ArxivQueryRun",
+        "init_args": {},
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/arxiv/",
+        "verified": true
+    },
+    {
+        "name": "PubMed",
+        "description": "Search and retrieve biomedical literature from PubMed, which comprises more than 35 million citations from MEDLINE, life science journals, and online books. This tool allows querying PubMed and returns relevant information including publication dates, titles, copyright information, and summaries of scientific articles.",
+        "programming_language": "python",
+        "module": "langchain_community.tools.pubmed.tool",
+        "class": "PubmedQueryRun",
+        "init_args": {},
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/pubmed/",
+        "verified": true
+    },
+    {
+        "name": "PyPDFLoader",
+        "description": "Load and parse PDF documents, with options for page-by-page or single flow extraction, metadata retrieval, and custom page delimiters.",
+        "programming_language": "python",
+        "module": "langchain_community.document_loaders",
+        "class": "PyPDFLoader",
+        "init_args": {
+            "file_path": "str",
+            "mode": "str",
+            "pages_delimiter": "str"
+        },
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/document_loaders/pypdfloader/",
+        "verified": true
+    },
+    {
+        "name": "StackExchange",
+        "description": "Query StackOverflow or other Stack Exchange sites for answers to questions on diverse topics, with a focus on computer programming. This tool integrates the StackExchange API, allowing access to the Stack Exchange network, including StackOverflow.",
+        "programming_language": "python",
+        "module": "langchain_community.utilities",
+        "class": "StackExchangeAPIWrapper",
+        "init_args": {
+            "site": "stackoverflow"
+        },
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/stackexchange/",
+        "verified": true
+    },
+    {
+        "name": "Wikidata",
+        "description": "Query structured data from Wikidata, a free and open knowledge base that can be read and edited by both humans and machines. Wikidata is one of the world's largest open knowledge bases, providing access to a wide range of structured information.",
+        "programming_language": "python",
+        "module": "langchain_community.tools.wikidata.tool",
+        "class": "WikidataQueryRun",
+        "init_args": {
+            "api_wrapper": "WikidataAPIWrapper()"
+        },
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/wikidata/",
+        "verified": true
+    },
+    {
+        "name": "OpenAPI Toolkit",
+        "description": "A toolkit for interacting with and consuming arbitrary APIs that conform to the OpenAPI/Swagger specification. It allows for the construction of agents that can automatically use API endpoints based on their OpenAPI specs, enabling complex interactions and multi-step processes with various APIs.",
+        "programming_language": "python",
+        "module": "langchain_community.agent_toolkits.openapi",
+        "class": "OpenAPIToolkit",
+        "init_args": {
+            "spec": "<UNKNOWN>",
+            "requests_wrapper": "<UNKNOWN>",
+            "llm": "<UNKNOWN>"
+        },
+        "openapi": null,
+        "pricing": "Free (tooling only)",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/openapi/",
+        "verified": true
+    },
+    {
+        "name": "NLA Toolkit",
+        "description": "Natural Language API Toolkit that allows LangChain Agents to efficiently plan and combine calls across multiple API endpoints. It provides a concise natural language interface to wrapped APIs, making it easier for top-level conversational agents to incorporate various endpoints to satisfy user requests.",
+        "programming_language": "python",
+        "module": "langchain_community.agent_toolkits",
+        "class": "NLAToolkit",
+        "init_args": {
+            "llm": "<LLM_INSTANCE>",
+            "url": "<API_URL>"
+        },
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/openapi_nla/",
+        "verified": true
+    },
+    {
+        "name": "Zapier NLA",
+        "description": "Zapier Natural Language Actions integration that provides access to 5000+ apps and 20,000+ actions on Zapier's platform through a natural language API interface. It handles API authentication and translation from natural language to underlying API calls, supporting apps like Gmail, Salesforce, Trello, Slack, Asana, HubSpot, Google Sheets, Microsoft Teams, and thousands more.",
+        "programming_language": "python",
+        "module": "langchain_community.utilities.zapier",
+        "class": "ZapierNLAWrapper",
+        "init_args": {
+            "api_key": "${ZAPIER_NLA_API_KEY}"
+        },
+        "openapi": null,
+        "pricing": "Paid (Zapier plan)",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/zapier/",
+        "verified": false
+    },
+    {
+        "name": "Requests Toolkit",
+        "description": "A toolkit for constructing agents that generate HTTP requests. It provides tools for GET, POST, PATCH, PUT, and DELETE operations. This toolkit allows for interaction with APIs, but requires caution due to potential security risks when executing real-world actions.",
+        "programming_language": "python",
+        "module": "langchain_community.agent_toolkits.openapi.toolkit",
+        "class": "RequestsToolkit",
+        "init_args": {
+            "requests_wrapper": "TextRequestsWrapper",
+            "allow_dangerous_requests": true
+        },
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/requests/",
+        "verified": true
+    },
+    {
+        "name": "AgentQL",
+        "description": "AgentQL provides tools for web interaction and structured data extraction from web pages using AgentQL queries or Natural Language prompts. It offers three main tools: ExtractWebDataTool for extracting data from public web pages, and ExtractWebDataBrowserTool and GetWebElementBrowserTool for interacting with browser instances.",
+        "programming_language": "python",
+        "module": "langchain_agentql.tools",
+        "class": "ExtractWebDataTool",
+        "init_args": {
+            "api_key": "${AGENTQL_API_KEY}",
+            "timeout": 900,
+            "is_stealth_mode_enabled": false,
+            "wait_for": 0,
+            "is_scroll_to_bottom_enabled": false,
+            "mode": "fast",
+            "is_screenshot_enabled": false
+        },
+        "openapi": null,
+        "pricing": "Commercial",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/agentql/",
+        "verified": true
+    },
+    {
+        "name": "HyperBrowser Browser Agent Tools",
+        "description": "Hyperbrowser provides powerful browser agent tools that enable AI models to interact with web browsers programmatically. These tools can navigate websites, fill forms, click buttons, extract data, and perform complex web automation tasks. Hyperbrowser offers three types of browser agent tools: Browser Use Tool (general-purpose browser automation), OpenAI CUA Tool (integration with OpenAI's Computer Use Agent), and Claude Computer Use Tool (integration with Anthropic's Claude for computer use).",
+        "programming_language": "python",
+        "module": "langchain_hyperbrowser",
+        "class": "HyperbrowserBrowserUseTool",
+        "init_args": {
+            "api_key": "${HYPERBROWSER_API_KEY}"
+        },
+        "openapi": null,
+        "pricing": "Commercial",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/hyperbrowser_browser_agent_tools/",
+        "verified": true
+    },
+    {
+        "name": "HyperBrowser Web Scraping Tools",
+        "description": "HyperBrowser provides powerful web scraping, crawling, and data extraction capabilities. It offers instant scalability, simple integration with tools like Puppeteer and Playwright, powerful APIs for scraping and crawling, and built-in features to bypass anti-bot measures. Key capabilities include scraping web content into structured formats, crawling multiple pages automatically, and AI-powered extraction of specific information based on defined schemas.",
+        "programming_language": "python",
+        "module": "langchain_hyperbrowser",
+        "class": "HyperbrowserCrawlTool, HyperbrowserScrapeTool, HyperbrowserExtractTool",
+        "init_args": {
+            "api_key": "${HYPERBROWSER_API_KEY}"
+        },
+        "openapi": null,
+        "pricing": "Commercial",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/hyperbrowser_web_scraping_tools/",
+        "verified": true
+    },
+    {
+        "name": "PlayWright Browser Toolkit",
+        "description": "A toolkit for headless browser automation with Playwright, allowing programmatic control of web browsers for tasks like end-to-end testing, scraping, and automating interactions with dynamically rendered websites. It includes tools for navigation, clicking elements, extracting text and hyperlinks, and more.",
+        "programming_language": "python",
+        "module": "langchain_community.agent_toolkits",
+        "class": "PlayWrightBrowserToolkit",
+        "init_args": {},
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/playwright/",
+        "verified": true
+    },
+    {
+        "name": "Selenium Browser",
+        "description": "Web automation tool that allows interaction with web browsers programmatically. It can be used for web scraping, automated testing of web applications, and simulating user interactions with websites.",
+        "programming_language": "python",
+        "module": "langchain.tools.selenium",
+        "class": "SeleniumBrowser",
+        "init_args": {
+            "driver_path": "${SELENIUM_DRIVER_PATH}"
+        },
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/selenium",
+        "verified": false
+    },
+    {
+        "name": "Anthropic",
+        "description": "Large language models via Anthropic's API, including Claude 2.1. Note: This integration is for legacy Claude 2 models as text completion models, which have been deprecated. For the latest chat completion models, refer to the updated documentation.",
+        "programming_language": "python",
+        "module": "langchain_anthropic",
+        "class": "AnthropicLLM",
+        "init_args": {
+            "api_key": "${ANTHROPIC_API_KEY}",
+            "model": "claude-2.1"
+        },
+        "openapi": null,
+        "pricing": "Paid (Anthropic API)",
+        "documentation": "https://python.langchain.com/docs/integrations/llms/anthropic",
+        "verified": true
+    },
+    {
+        "name": "AskNews",
+        "description": "AskNews infuses any LLM with the latest global news (or historical news), using a single natural language query. It enriches over 300k articles per day by translating, summarizing, extracting entities, and indexing them into vector databases, providing prompt-optimized strings containing pertinent enrichments.",
+        "programming_language": "python",
+        "module": "langchain_community.tools.asknews",
+        "class": "AskNewsSearch",
+        "init_args": {
+            "max_results": 2
+        },
+        "openapi": null,
+        "pricing": null,
+        "documentation": "https://python.langchain.com/docs/integrations/tools/asknews/",
+        "verified": true
+    },
+    {
+        "name": "Selenium URL Loader",
+        "description": "A tool for loading HTML content from URLs using Selenium, which allows for web automation and interaction with dynamic JavaScript-rendered content. This is particularly useful for scraping data from websites that require JavaScript execution or have dynamic content that doesn't load with simple HTTP requests.",
+        "programming_language": "python",
+        "module": "langchain_community.document_loaders",
+        "class": "SeleniumURLLoader",
+        "init_args": {
+            "urls": [
+                "list of URLs to load"
+            ],
+            "continue_on_failure": false,
+            "headless": true,
+            "driver_type": "chrome",
+            "ignore_ssl_errors": false
+        },
+        "openapi": null,
+        "pricing": "Free",
+        "documentation": "https://python.langchain.com/docs/integrations/document_loaders/url/#seleniloader",
+        "verified": false
+    },
+    {
+        "name": "Google Calendar Toolkit",
+        "description": "A toolkit for interacting with Google Calendar API, allowing users to create, search, update, move, and delete events, as well as list calendars and get current date/time. It enables full integration with Google Calendar, including features like setting reminders and adding conference data to events.",
+        "programming_language": "python",
+        "module": "langchain_google_community",
+        "class": "CalendarToolkit",
+        "init_args": {},
+        "openapi": null,
+        "pricing": "Free (requires Google account and API setup)",
+        "documentation": "https://python.langchain.com/docs/integrations/tools/google_calendar",
+        "verified": true
+    }
+]
