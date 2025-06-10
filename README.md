@@ -174,4 +174,5 @@ Feel free to reach out:
 * Ethan Epp: [eepp@ucsb.edu](mailto:eepp@ucsb.edu)
 * Jonathan Cheng: [jonathancheng@ucsb.edu](mailto:jonathancheng@ucsb.edu)
 
+Or just ask chatGPT, it probably knows. Shoutout chatGPT
 ---
