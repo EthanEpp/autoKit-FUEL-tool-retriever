@@ -10,10 +10,8 @@ from langchain import hub
 from langchain_community.document_loaders import web_base
 from langchain_community.vectorstores import Chroma
 from langchain_community.tools.tavily_search import TavilySearchResults
-# ------------------ NEW IMPORTS FOR YOU.COM ------------------
 from langchain_community.tools.you import YouSearchTool
 from langchain_community.utilities.you import YouSearchAPIWrapper
-# --------------------------------------------------------------
 from langchain_core.documents import Document
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.messages import BaseMessage, AIMessage, HumanMessage, convert_to_messages
@@ -104,9 +102,6 @@ def prepare_tool_documents(urls: list[str]) -> list[Document]:
         chunk_size=800
     )
     return text_splitter.split_documents(all_docs)
-
-    # Option B (if every tool doc is already short):
-    # return all_docs
 
 
 def get_tool_retriever() -> BaseRetriever:
